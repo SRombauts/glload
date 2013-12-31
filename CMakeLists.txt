@@ -8,8 +8,7 @@ project(glload)
 
 # Define useful variables to handle OS/Compiler differences
 if (MSVC)
-    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
-    set(CMAKE_CXX_FLAGS_DEBUG   "${CMAKE_CXX_FLAGS_DEBUG} /MTd /DMEMORY_DEBUGGING")
+    set(CMAKE_CXX_FLAGS_DEBUG   "${CMAKE_CXX_FLAGS_DEBUG} /DMEMORY_DEBUGGING")
     add_definitions (/D_CRT_SECURE_NO_WARNINGS /D_SCL_SECURE_NO_WARNINGS)
     # List Windows only sources/headers files
     file(GLOB os_specific_files
